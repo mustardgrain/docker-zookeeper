@@ -1,0 +1,11 @@
+#!/bin/bash -e
+
+if [ ! -f $ZOOKEEPER_HOME/conf/zoo.cfg ]; then
+    CONF_FILE=$ZOOKEEPER_HOME/conf/zoo.cfg
+
+    echo "tickTime=2000" >> $CONF_FILE
+    echo "dataDir=$ZOOKEEPER_HOME/data" >> $CONF_FILE
+    echo "clientPort=2181" >> $CONF_FILE
+fi
+
+$ZOOKEEPER_HOME/bin/zkServer.sh start-foreground
