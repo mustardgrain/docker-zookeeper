@@ -1,8 +1,8 @@
 #!/bin/bash -e
 
-if [ ! -f $ZOOKEEPER_HOME/conf/zoo.cfg ]; then
-    CONF_FILE=$ZOOKEEPER_HOME/conf/zoo.cfg
+CONF_FILE=$ZOOKEEPER_HOME/conf/zoo.cfg
 
+if [ ! -f $CONF_FILE ]; then
     echo "tickTime=2000" >> $CONF_FILE
     echo "dataDir=$ZOOKEEPER_HOME/data" >> $CONF_FILE
     echo "clientPort=2181" >> $CONF_FILE
