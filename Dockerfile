@@ -4,7 +4,7 @@ MAINTAINER Kirk True <kirk@mustardgrain.com>
 
 CMD ["/sbin/my_init"]
 
-ENV ZOOKEEPER_VERSION 3.4.6
+ENV ZOOKEEPER_VERSION 3.4.8
 ENV ZOOKEEPER_URL http://www.us.apache.org/dist/zookeeper/zookeeper-$ZOOKEEPER_VERSION/zookeeper-$ZOOKEEPER_VERSION.tar.gz
 ENV ZOOKEEPER_HOME /opt/zookeeper-$ZOOKEEPER_VERSION
 
